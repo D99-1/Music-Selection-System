@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Selection System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="header">
+        <img src="https://4m4you.com/wp-content/uploads/2020/06/logo-placeholder.png" alt="logo" class="logo">
+    </section>
+    <section class="body">
+        <div class="container">
+            <div class="section1" id="songs">
+            <div class="currently-playing">
+                <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-square.png" alt="album-cover" class="album-cover" id="current-album-cover">
+                <div class="song-info">
+                    <h2 class="song-title" id="current-song-title">Song Title</h2>
+                    <h3 class="artist-name" id="current-artist-name" style="font-weight: 500;">Artist Name</h3>
+                </div>
+            </div>
+            <div class="up-next">
+                <div class="one">
+                    <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-square.png" alt="album-cover" class="album-cover" id="up-next-album-cover">
+                    <div class="song-info">
+                        <h2 class="song-title" id="up-next-song-title">Song Title</h2>
+                        <h3 class="artist-name" id="up-next-artist-name" style="font-weight: 500;">Artist Name</h3>
+                    </div>
+                </div>
+                </div>
+                <div class="view-all">
+                    <h3>View All</h3>
+                </div>
+            </div>
+                <div class="search" id="search">
+                    <input type="text" placeholder="Add a song" id="search-input" autocomplete="off" spellcheck="false">
+                    <button class="search-button" id="search-cross-btn" disabled="true">
+                        <img src="./assets/search.png" alt="search-cross-icon" id="search-cross-icon" height="20px" width="20px">
+                        </button>
+                </div>
+                    <div class="search-results" id="search-results">
+
+                        
+                </div>
+            <div class="suggestions" id="suggestions">
+                <div class="suggestion-row" id="suggestion-row1">
+                <div class="suggestion">
+                    <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-square.png" alt="album-cover" class="album-cover">
+                </div>
+                <div class="suggestion">
+                    <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-square.png" alt="album-cover" class="album-cover">
+                </div>
+                <div class="suggestion">
+                    <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-square.png" alt="album-cover" class="album-cover">
+                </div>
+            </div>
+            <div class="suggestion-row" id="suggestion-row2">
+                <div class="suggestion">
+                    <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-square.png" alt="album-cover" class="album-cover">
+                </div>
+                <div class="suggestion">
+                    <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-square.png" alt="album-cover" class="album-cover">
+                </div>
+                <div class="suggestion">
+                    <img src="https://raw.githubusercontent.com/julien-gargot/images-placeholder/master/placeholder-square.png" alt="album-cover" class="album-cover">
+                </div>     
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

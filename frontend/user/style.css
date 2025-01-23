@@ -1,0 +1,259 @@
+:root {
+    --main-width: 300px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #474747;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: var(--main-width)
+}
+
+.header .logo{
+    width: calc(var(--main-width) / 2);
+    height: auto;
+    aspect-ratio: 0;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.body .currently-playing .album-cover{
+    position: absolute;
+    width: var(--main-width);
+    height: auto;
+    filter: brightness(0.6);
+    z-index: -1;
+    display: block;
+}
+
+.body .currently-playing .song-info .artist-name{
+    font-weight: 500;
+}
+
+
+.body .container .currently-playing h2{
+    text-shadow:
+    -0.5px -0.5px 0 #000,
+    0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000;  
+}
+
+
+
+.body .container .view-all{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: var(--main-width);
+    height: 50px;
+    margin-top: 5px;
+    border-radius: 5px 5px 30px 30px;
+    background-color: #333333;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+.body .currently-playing{
+    overflow: hidden;
+    display: grid;
+    align-content: end;
+    position: relative;
+    color: antiquewhite;
+    text-overflow: ellipsis;
+    width: var(--main-width);
+    aspect-ratio: 1;
+    padding: 1rem;
+    border-radius: 30px 30px 5px 5px;
+}
+
+.body .container .search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: var(--main-width);
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 30px;
+    background-color: #333333;
+}
+
+.body .container .search input[type="text"]{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 30px 0px 0px 30px;
+    background-color: #333333;
+    color: antiquewhite;
+    padding: 0px 0px 0px 20px;
+    font-size: 20px;
+    outline: none;
+}
+
+
+.body .container .search .search-button{
+    width: 80px;
+    height: 100%;
+    border: none;
+    border-radius: 0px 30px 30px 0px;
+    background-color: #333333;
+    color: antiquewhite;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.body .container .currently-playing .song-info{
+    position: absolute;
+    color:antiquewhite;
+    bottom: 0;
+    left: 0;
+    padding: 0px 4px 20px 20px;
+    text-overflow: ellipsis;
+}
+
+body > section.body > div > div.search > button > svg{
+    height: 30px;
+    width: 30px;
+}
+
+#cross-svg{
+    display: none;
+}
+
+.section1{
+    width: var(--main-width);
+}
+
+
+.body .up-next{
+    margin-top: 5px;
+    width: var(--main-width);
+}
+
+.body .up-next .one .album-cover{
+    width: 75px;
+    height: 75px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.body .up-next .one{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--main-width);
+    height: 75px;
+    background-color: #333333;
+    border-radius: 5px 5px 5px 5px;
+    text-overflow: ellipsis;
+}
+
+.body .up-next .one .song-info{
+    margin: 0px 10px 0px 10px;
+    color:antiquewhite;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.body .up-next .one .song-info .artist-name{
+    text-overflow: ellipsis;
+}
+
+.suggestions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    width: var(--main-width);
+    gap: 10px;
+}
+
+.suggestion-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    width: var(--main-width);
+}
+
+.suggestion img{
+    width: calc(var(--main-width) / 4);
+    height: auto;
+    border-radius: 10px;
+    transition: height 0.3s, width 0.3s;
+}
+
+.search-results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    width: var(--main-width);
+    gap: 10px;
+}
+
+.search-result img{
+    width: 75px;
+    height: 75px;
+}
+
+.search-result{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--main-width);
+    height: 75px;
+    background-color: #333333;
+    border-radius: 5px 5px 5px 5px;
+    text-overflow: ellipsis;
+}
+
+.search-result .song-info{
+    margin: 0px 10px 0px 10px;
+    color:antiquewhite;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.search-result .song-info .artist-name{
+    text-overflow: ellipsis;
+    font-weight: 500;
+}
+
